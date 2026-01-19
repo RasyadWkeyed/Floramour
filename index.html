@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floramour | Butik Bunga Eksklusif</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="logo.png" class="logo-img">
+            Floramour<span>.</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Category <small>▾</small></a>
+                <ul class="dropdown-content">
+                    <li><a href="box.html">BOUQUET & BOX FLOWER</a></li>
+                    <li><a href="convo.html">CONVOCATION FLOWER</a></li>
+                    <li><a href="wed.html">HANDS WEDDING FLOWER</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="cart-container" id="cart-icon-btn" style="cursor: pointer;">
+            <span class="cart-icon">👜</span>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+     <audio id="bgMusic" loop>
+    <source src="WEDI.m4a" type="audio/mpeg">
+</audio>
+
+<div id="music-control" onclick="toggleMusic()">
+    <span id="music-icon">🔈</span>
+</div>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <span class="close-sidebar">&times;</span>
+        </div>
+        <div id="cart-items-list">
+            <p class="empty-msg">Your cart is still empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>Total Amount:</span>
+                <span id="total-amount">RM 0.00</span>
+            </div>
+            <button class="btn-checkout">Order Now</button>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <header id="home" class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('floramour.jpg');">
+            <div class="hero-content">
+                <span class="subtitle">Latest Collection</span>
+                <h1>Seni in <br> <i>Every Creation</i></h1>
+                <p>Bring a smile to your loved ones with a selection of fresh A+ grade flowers.</p>
+                <button class="btn-primary" onclick="scrollToShop()">View Product</button>
+            </div>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('bg2.jpg');">
+            <div class="hero-content">
+                <span class="subtitle">Fresh Delivery</span>
+                <h1>Ceriakan Someone <br> <i>Special</i></h1>
+                <p>Quick delivery to your doorstep today.</p>
+                <button class="btn-primary" onclick="scrollToShop()">Order Now</button>
+            </div>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('bg3.jpg');">
+            <div class="hero-content">
+                <span class="subtitle">Discount 20%</span>
+                <h1>Raikan Special <br> <i>Moments</i></h1>
+                <p>Use promo code: BLOOM20 for your first purchase.</p>
+                <button class="btn-primary" onclick="scrollToShop()">Use Code</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="shop" class="shop-section">
+        <div class="section-title">
+            <h2>BEST SELLER FLOWER</h2>
+            <div class="line"></div>
+        </div>
+        <div class="product-grid">
+            <div class="card">
+                <div class="img-container"><img src="ha1.jfif" alt="Bunga 1"></div>
+                <div class="card-info">
+                    <h3>Aurora Grace</h3>
+                    <p>RM 150.00</p>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container"><img src="con4.jfif" alt="Bunga 2"></div>
+                <div class="card-info">
+                    <h3>Daisy  Blossom</h3>
+                    <p>RM 150.00</p>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container"><img src="kah8.jfif" alt="Bunga 3"></div>
+                <div class="card-info">
+                    <h3>Burgundy calla Lilies</h3>
+                    <p>RM 205.00</p>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-box brand-col">
+                <h3 style="font-family: 'Playfair Display';">Floramour<span>.</span></h3>
+                <p>Crafting beautiful moments with fresh flowers.</p>
+                <div class="social-icons">
+                   <a href="https://www.instagram.com/floram0ur?igsh=MXI3dnlmcWdlcDZnMQ%3D%3D&utm_source=qr">IG</a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h4>Contact Us</h4>
+                <div class="contact-item">
+                    <p>📍 Lot G-12, Bangsar Village II, KL</p>
+                </div>
+                <div class="contact-item">
+                    <p>📞 +6012-345 6789</p>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Floramour Boutique. Created with love.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Floramour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="logo.png" class="logo-img" alt="Floramour Logo">
+            Floramour<span>.</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Category <small>▾</small></a>
+                <ul class="dropdown-content">
+                    <li><a href="box.html">BOUQUET & BOX FLOWER</a></li>
+                    <li><a href="convo.html">CONVOCATION FLOWER</a></li>
+                    <li><a href="wed.html">HANDS WEDDING FLOWER</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="cart-container" id="cart-icon-btn" style="cursor: pointer;">
+            <span class="cart-icon">👜</span>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <audio id="bgMusic" loop>
+    <source src="WEDI.m4a" type="audio/mpeg">
+</audio>
+
+<div id="music-control" onclick="toggleMusic()">
+    <span id="music-icon">🔈</span>
+</div>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <span class="close-sidebar">&times;</span>
+        </div>
+        <div id="cart-items-list"></div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>Total Amount:</span>
+                <span id="total-amount">RM 0.00</span>
+            </div>
+            <button class="btn-checkout" id="booking-btn">Order Now</button>
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+    <header class="about-hero">
+        <br><br><br><br><br>
+        <span class="subtitle-soft">The Story Behind Floramour</span>
+        <h1>Art & <i>Dedication</i></h1>
+    </header>
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="bot1.jfif" alt="Kedai Bunga Kami">
+            </div>
+            <div class="about-text">
+                <span class="subtitle-soft">Est. 2020</span>
+                <h2>Floral Arrangements with <i>Soul</i></h2>
+                <div class="line" style="margin-left: 0;"></div>
+                <p>Floramour began as a small dream to bring the beauty of nature into every home in Malaysia. We believe that flowers are not just decorations, but a language of deep emotion.</p>
+                <p>Every arrangement in our boutique is carefully crafted by expert florists using premium-grade fresh flowers, specially imported to ensure lasting quality and freshness.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="flower-video-divider">
+        <div class="video-wrapper">
+            <video autoplay muted playsinline class="full-flower-video">
+                <source src="blom.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">
+                <p>"Where flowers bloom, so does hope."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <span class="subtitle-soft">Our Essence</span>
+        <h2 style="font-family: 'Playfair Display'; font-size: 2.8rem; font-weight: 400; margin-bottom: 10px;">Our Core Values</h2>
+        <p style="color: #888; font-weight: 300;">Our commitment to delivering the very best for you.</p>
+        
+        <div class="values-grid-new">
+            <div class="value-box">
+                <div class="value-number">01</div>
+                <h3>Our Vision </h3>
+                <p>To become Malaysia’s most iconic digital floral boutique, recognized for its organic, exclusive, and emotionally rich floral arrangements.</p>
+            </div>
+
+            <div class="value-box">
+                <div class="value-number">02</div>
+                <h3>Our Mision</h3>
+                <p>Providing a seamless, fast, and aesthetically pleasing shopping experience while ensuring the highest quality Grade A fresh flowers.</p>
+            </div>
+
+            <div class="value-box">
+                <div class="value-number">03</div>
+                <h3>Our Promise</h3>
+                <p>We promise maximum freshness through arrangements that follow the latest trends while preserving timeless classic elements.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-box brand-col">
+                <h3 style="font-family: 'Playfair Display';">Floramour<span>.</span></h3>
+                <p>Crafting beautiful moments with fresh flowers.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/floram0ur?igsh=MXI3dnlmcWdlcDZnMQ%3D%3D&utm_source=qr">IG</a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h4>Contact Us</h4>
+                <div class="contact-item">
+                    <p>📍 Lot G-12, Bangsar Village II, KL</p>
+                </div>
+                <div class="contact-item">
+                    <p>📞 +6012-345 6789</p>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Floramour Boutique. Created with love.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

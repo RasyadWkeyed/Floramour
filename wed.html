@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Collection | Floramour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="logo.png" class="logo-img" alt="Floramour Logo">
+            Floramour<span>.</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Category <small>▾</small></a>
+                <ul class="dropdown-content">
+                    <li><a href="box.html">BOUQUET FLOWER</a></li>
+                    <li><a href="convo.html">CONVOCATION FLOWER</a></li>
+                    <li><a href="wed.html">WEDDING HAND FLOWER</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="cart-container" id="cart-icon-btn" style="cursor: pointer;">
+            <span class="cart-icon">👜</span>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+         <audio id="bgMusic" loop>
+    <source src="WEDI.m4a" type="audio/mpeg">
+</audio>
+
+<div id="music-control" onclick="toggleMusic()">
+    <span id="music-icon">🔈</span>
+</div>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <span class="close-sidebar">&times;</span>
+        </div>
+        <div id="cart-items-list"></div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>Total Amount:</span>
+                <span id="total-amount">RM 0.00</span>
+            </div>
+            <button class="btn-checkout" id="booking-btn">Order Now</button>
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+    <header class="about-hero" style="height: 50vh; background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('wed1.jfif');">
+        <span class="subtitle-soft" style="color: white; opacity: 0.9;">Your Special Day</span>
+        <br>
+        <br>
+        <h1 style="color: white;">Bridal <i>Hand Flowers</i></h1>
+    </header>
+
+    <section class="shop-section">
+        <div class="section-title">
+            <span class="subtitle-soft">Promise of Loyalty</span>
+            <h2>Collection of 9 Bridal Bouquets</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="product-grid">
+            <div class="card">
+                <div class="img-container">
+                    <img src="kah1.jfif" alt="Wedding 1">
+                </div>
+                <div class="card-info">
+                    <h3>Petal Cascade</h3>
+                    <p>RM 180.00</p>
+                    <button class="add-btn" onclick="addToCart('Petal Cascade', 180)">+ Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="kah2.jfif" alt="Wedding 2">
+                </div>
+                <div class="card-info">
+                    <h3>Pure White Peony</h3>
+                    <p>RM 190.00</p>
+                    <button class="add-btn" onclick="addToCart('Pure White Peony', 195)">+ Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="kah3.jfif" alt="Wedding 3">
+                </div>
+                <div class="card-info">
+                    <h3>Rustic Bloom</h3>
+                    <p>RM 195.00</p>
+                    <button class="add-btn" onclick="addToCart('Rustic Bloom', 210)">+ Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="kah4.jfif" alt="Wedding 4">
+                </div>
+                <div class="card-info">
+                    <h3>Garden Woven</h3>
+                    <p>RM 190.00</p>
+                    <button class="add-btn" onclick="addToCart('Garden Woven', 140)">+ Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="kah5.jfif" alt="Wedding 5">
+                </div>
+                <div class="card-info">
+                    <h3>Nature's Embrace</h3>
+                    <p>RM 200.00</p>
+                    <button class="add-btn" onclick="addToCart('Nature s Embrace', 200)">+ Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="kah6.jfif" alt="Wedding 6">
+                </div>
+                <div class="card-info">
+                    <h3>Blossom Trail</h3>
+                    <p>RM 155.00</p>
+                    <button class="add-btn" onclick="addToCart('Blossom Trail', 155)">+ Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="kah7.jfif" alt="Wedding 7">
+                </div>
+                <div class="card-info">
+                    <h3>Wild Petal</h3>
+                    <p>RM 180.00</p>
+                    <button class="add-btn" onclick="addToCart('Wild Petal', 180)">+ Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="kah8.jfif" alt="Wedding 8">
+                </div>
+                <div class="card-info">
+                    <h3>Burgundy calla Lilies</h3>
+                    <p>RM 205.00</p>
+                    <button class="add-btn" onclick="addToCart('Burgundy calla Lilies', 195)">+ Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <img src="kah9.jpg" alt="Wedding 9">
+                </div>
+                <div class="card-info">
+                    <h3>Blushing Bride</h3>
+                    <p>RM 190.00</p>
+                    <button class="add-btn" onclick="addToCart('Blushing Brid', 130)">+ Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+   <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-box brand-col">
+                <h3 style="font-family: 'Playfair Display';">Floramour<span>.</span></h3>
+                <p>Crafting beautiful moments with fresh flowers.</p>
+                <div class="social-icons">
+                     <a href="https://www.instagram.com/floram0ur?igsh=MXI3dnlmcWdlcDZnMQ%3D%3D&utm_source=qr">IG</a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h4>Contact Us</h4>
+                <div class="contact-item">
+                    <p>📍 Lot G-12, Bangsar Village II, KL</p>
+                </div>
+                <div class="contact-item">
+                    <p>📞 +6012-345 6789</p>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Floramour Boutique. Created with love.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

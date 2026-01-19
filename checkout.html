@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran | Floramour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="checkout-box">
+        <a href="javascript:history.back()" class="btn-back">
+            <span>←</span> Back
+        </a>
+
+        <h2>Payment</h2>
+        <div class="total-amount" id="display-total">RM 0.00</div>
+
+        <div class="customer-info">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="cust-name" placeholder="Full Name">
+            </div>
+
+            <div class="form-group">
+                <label>IC Number</label>
+                <input type="text" id="cust-ic" placeholder="Exp: 010203010405">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="cust-phone" placeholder="Exp: 0123456789">
+            </div>
+            <div class="form-group">
+                <label>Delivery Options</label>
+                <select id="delivery-option" onchange="toggleAddress()">
+                    <option value="pickup">Self Pickup </option>
+                    <option value="delivery">Delivery </option>
+                </select>
+            </div>
+            <div class="form-group" id="address-wrapper">
+                <label>Delivery Address</label>
+                <textarea id="cust-address" rows="3" placeholder="Enter your full address"></textarea>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+        <p style="font-size: 0.8rem; color: #666;">Scan QR to Payment</p>
+        <div class="qr-section">
+            <img src="qr.png" alt="QR Bayaran">
+        </div>
+
+        <div class="upload-section">
+            <label style="font-size: 0.8rem; font-weight: 600;">Upload Payment Proof:</label>
+            <input type="file" id="evidence-file" accept="image/*">
+        </div>
+
+        <button class="btn-confirm" id="submit-pay">Confirm & View Receipt</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

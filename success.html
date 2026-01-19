@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Receipt | Floramour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="receipt">
+        <h2>Floramour<span>.</span></h2>
+        <p style="text-align: center; font-size: 0.85rem; color: #666; margin-top: 0;">Thank you for your order!</p>
+        
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+
+        <div class="customer-details">
+            <div class="info-row">
+                <span>Customer</span>
+                <span>:</span>
+                <b id="res-name">-</b>
+            </div>
+            
+            <div class="info-row">
+                <span>IC Number</span>
+                <span>:</span>
+                <b id="res-ic">-</b>
+            </div>
+            
+            <div class="info-row">
+                <span>Phone</span>
+                <span>:</span>
+                <b id="res-phone">-</b>
+            </div>
+
+            <div class="info-row">
+                <span>Method</span>
+                <span>:</span>
+                <b id="res-method">-</b>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px dashed #eee; margin: 15px 0;">
+        
+        <div id="items-list">
+            </div>
+        
+        <div class="total">
+            <span>TOTAL</span>
+            <span id="grand-total">RM 0.00</span>
+        </div>
+        
+        <p style="font-size: 0.7rem; color: #999; margin-top: 30px; text-align: center;">Please save or print this receipt for your reference.</p>
+    </div>
+    
+    <div class="no-print">
+        <button class="btn" onclick="window.print()">Print Receipt</button>
+        <button onclick="clearCartAndGoBack()" class="btn" style="background: #2d2d2d;">Back to Shop</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
